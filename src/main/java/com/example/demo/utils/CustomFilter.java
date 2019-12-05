@@ -1,117 +1,25 @@
 package com.example.demo.utils;
 
+import com.example.demo.persistance.entities.Province;
+import com.example.demo.persistance.entities.Secteur;
+import com.example.demo.persistance.entities.Type;
+
 public class CustomFilter {
 
     private String statut;
-    private Integer secteurId;
-    private Long provinceId;
-    private Integer typeIncidentId;
+    private Secteur secteur;
+    private Province province;
+    private Type type;
 
     public CustomFilter() {
-
     }
 
-    public CustomFilter(String statut, Integer secteurId, Long provinceId, Integer typeIncidentId) {
+    public CustomFilter(String statut, Secteur secteur, Province province, Type type) {
         this.statut = statut;
-        this.secteurId = secteurId;
-        this.provinceId = provinceId;
-        this.typeIncidentId = typeIncidentId;
+        this.secteur = secteur;
+        this.province = province;
+        this.type = type;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public String getStatut() {
         return statut;
@@ -121,27 +29,27 @@ public class CustomFilter {
         this.statut = statut;
     }
 
-    public Integer getSecteurId() {
-        return secteurId;
+    public Secteur getSecteur() {
+        return secteur;
     }
 
-    public void setSecteurId(Integer secteurId) {
-        this.secteurId = secteurId;
+    public void setSecteur(Secteur secteur) {
+        this.secteur = secteur;
     }
 
-    public Long getProvinceId() {
-        return provinceId;
+    public Province getProvince() {
+        return province;
     }
 
-    public void setProvinceId(Long provinceId) {
-        this.provinceId = provinceId;
+    public void setProvince(Province province) {
+        this.province = province;
     }
 
-    public Integer getTypeIncidentId() {
-        return typeIncidentId;
+    public Type getType() {
+        return type;
     }
 
-    public void setTypeIncidentId(Integer typeIncidentId) {
-        this.typeIncidentId = typeIncidentId;
+    public void setType(Type type) {
+        this.type = type;
     }
 }

@@ -5,10 +5,11 @@ import com.example.demo.persistance.entities.Province;
 import com.example.demo.persistance.entities.Secteur;
 import com.example.demo.persistance.entities.Type;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
 
-public interface IncidentRepository extends JpaRepository<Incident,Long> {
+public interface IncidentRepository extends JpaRepository<Incident,Long>, JpaSpecificationExecutor<Incident> {
     public Incident findById(long Id);
     public List<Incident> findBySecteur(Secteur secteur);
     List<Incident> findByStatut(String statut);

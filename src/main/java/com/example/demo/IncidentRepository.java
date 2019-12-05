@@ -12,8 +12,9 @@ public interface IncidentRepository extends JpaRepository<Incident,Long> {
     List<Incident> findByProvince(Province province);
     List<Incident> findByType(Type type);
 
+    /*
     @Query("Select * from Incident i where i.statut = ?1")
     List<Incident> findByQuery(String statut, Secteur secteur, Province province, Type type);
-
+*/
 
 }

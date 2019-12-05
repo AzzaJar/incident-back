@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.persistance.entities;
 
 import javax.persistence.*;
 import java.util.List;

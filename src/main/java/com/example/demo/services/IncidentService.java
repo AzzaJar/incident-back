@@ -1,4 +1,7 @@
-package com.example.demo;
+package com.example.demo.services;
+
+import com.example.demo.persistance.entities.Incident;
+import com.example.demo.persistance.entities.Secteur;
 
 import java.util.List;
 

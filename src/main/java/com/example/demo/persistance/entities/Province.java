@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.persistance.entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,7 +14,7 @@ public class Province {
     @Column(name = "nom_prov", unique = true,nullable = false)
     private String province;
     @OneToMany(mappedBy = "province")
-    private List<com.example.demo.Incident> Incident;
+    private List<com.example.demo.persistance.entities.Incident> Incident;
 
 
 

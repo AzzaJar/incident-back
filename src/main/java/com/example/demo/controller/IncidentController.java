@@ -1,10 +1,14 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.persistance.entities.Incident;
+import com.example.demo.services.IncidentService;
+import com.example.demo.persistance.entities.Secteur;
+import com.example.demo.services.SecteurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
+
 @RequestMapping (value = "Incident")
 @CrossOrigin("*")
 @RestController
@@ -12,7 +16,7 @@ public class IncidentController {
     @Autowired
     IncidentService incidentService;
     @Autowired
-    private  SecteurService secteurService;
+    private SecteurService secteurService;
 
 
 

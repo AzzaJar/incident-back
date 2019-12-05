@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.example.demo.persistance.repositories.IncidentRepository;
+import com.example.demo.persistance.repositories.SecteurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,7 +19,7 @@ public class DemoApplication implements CommandLineRunner {
 	 @Autowired
 	 private IncidentRepository incidentRepository;
 	 @Autowired
-	 private  SecteurRepository secteurRepository;
+	 private SecteurRepository secteurRepository;
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}

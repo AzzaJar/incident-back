@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.services;
+
+import com.example.demo.persistance.entities.Type;
 
 import java.util.List;
 

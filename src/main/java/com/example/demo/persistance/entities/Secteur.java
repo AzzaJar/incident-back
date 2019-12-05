@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.persistance.entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,7 +10,7 @@ public class Secteur  {
     private long id;
     private String secteur;
     @OneToMany(mappedBy = "secteur")
-    private List<com.example.demo.Incident> Incident;
+    private List<com.example.demo.persistance.entities.Incident> Incident;
 
 
 

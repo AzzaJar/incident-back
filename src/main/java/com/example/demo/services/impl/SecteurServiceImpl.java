@@ -1,14 +1,17 @@
-package com.example.demo;
+package com.example.demo.services.impl;
 
+import com.example.demo.persistance.repositories.SecteurRepository;
+import com.example.demo.persistance.entities.Secteur;
+import com.example.demo.services.SecteurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class SecteurServiceImpl implements SecteurService{
+public class SecteurServiceImpl implements SecteurService {
 
     @Autowired
-    private SecteurRepository  secteurRepository;
+    private SecteurRepository secteurRepository;
     @Override
     public Secteur findByID(long id) {
         return  secteurRepository.findById(id);

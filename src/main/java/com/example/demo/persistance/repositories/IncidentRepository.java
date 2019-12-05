@@ -1,7 +1,10 @@
-package com.example.demo;
+package com.example.demo.persistance.repositories;
 
+import com.example.demo.persistance.entities.Incident;
+import com.example.demo.persistance.entities.Province;
+import com.example.demo.persistance.entities.Secteur;
+import com.example.demo.persistance.entities.Type;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 

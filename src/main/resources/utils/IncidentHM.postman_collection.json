@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "dbbddbb6-e2dc-4012-bccf-a7b0901bdbe2",
+		"name": "IncidentHM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/Incident/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Incident",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryCM",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"statut\": null,\n\t\"secteur\": {\n\t\t\"id\":1,\n\t\t\"secteur\": \"EAU\"\n\t},\n\t\"province\": null,\n\t\"type\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Incident/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Incident",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryBonusCM",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"statut\": \"valide\",\n\t\"secteur\": {\n\t\t\"id\": 1,\n\t\t\"secteur\": \"EAU\"\n\t},\n\t\"province\": null,\n\t\"type\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Incident/or_query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Incident",
+						"or_query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByQuery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"secteur\":\"eau\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Incident/findByQuery?field=secteur",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Incident",
+						"findByQuery"
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "secteur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findBySecQuery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"secteur\":\"eau\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Incident/findBySecQuery?field=secteur",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Incident",
+						"findBySecQuery"
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "secteur"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

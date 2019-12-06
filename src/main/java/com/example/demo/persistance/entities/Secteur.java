@@ -9,6 +9,7 @@ public class Secteur  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String secteur;
+//    @OneToMany(mappedBy = "secteur", fetch = FetchType.LAZY)
     @OneToMany(mappedBy = "secteur")
     private List<com.example.demo.persistance.entities.Incident> Incident;
 
